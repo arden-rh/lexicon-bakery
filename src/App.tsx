@@ -1,12 +1,24 @@
-import './App.css'
+import { useState } from "react"
+import Home from "./pages/Home.tsx"
+import About from "./pages/About.tsx"
+import Products from "./pages/Products.tsx"
+import Contact from "./pages/Contact.tsx"
+import Layout from "./components/Layout/Layout.tsx"
 
-function App() {
+const App = () => {
+
+  const [currentPage, setCurrentPage] = useState("home");
 
   return (
     <>
-      <div>
-      </div>
-  
+      <Layout currentPage={currentPage} setCurrentPage={setCurrentPage}>
+        {currentPage === "home" && <Home />}
+        {currentPage === "about" && <About />}
+        {currentPage === "products" && <Products />}
+        {currentPage === "contact" && <Contact />}
+      </Layout>
+
+
     </>
   )
 }

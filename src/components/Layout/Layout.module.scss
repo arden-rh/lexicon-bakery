@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: $primary-color;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid $secondary-color;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+
+    /* Responsive padding for medium and larger screens */
+    @include respond-to("medium") {
+        padding: 3rem 4rem;
+    }
+}
+
+.footer {
+    background-color: $secondary-color;
+    padding: 1rem 2rem;
+    border-top: 1px solid $primary-color;
+    text-align: center;
+    color: white;
+}
