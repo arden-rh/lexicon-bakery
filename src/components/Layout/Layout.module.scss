@@ -5,9 +5,8 @@
 }
 
 .navbar {
-    background-color: $primary-color;
     padding: 1rem 2rem;
-    border-bottom: 1px solid $secondary-color;
+    border-bottom: 3px solid $primary-color;
 }
 
 .content {
@@ -21,9 +20,6 @@
 }
 
 .footer {
-    background-color: $secondary-color;
     padding: 1rem 2rem;
-    border-top: 1px solid $primary-color;
     text-align: center;
-    color: white;
 }

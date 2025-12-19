@@ -1,0 +1,15 @@
+.card {
+    border: 1px solid $primary-color;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: $background-color;
+    color: $text-color;
+
+	h3 {
+		font-family: $font-family-subheading;
+		font-size: 1.5rem;
+		font-weight: 700;
+		font-style: normal;
+		margin-bottom: 0.5rem;
+	}
+}
