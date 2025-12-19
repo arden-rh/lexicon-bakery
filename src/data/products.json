@@ -1,0 +1,28 @@
+{
+    "metadata": {
+        "generatedAt": "2025-12-19T14:30:00Z",
+        "totalItems": 16,
+        "categories": ["cupcake", "wedding"],
+        "currency": "SEK",
+        "storeStatus": "open"
+    },
+    "products": [
+        { "id": "c1", "title": "Midnight Velvet", "category": "cupcake", "price": 4.50, "image": "https://placehold.co/400x400?text=Cupcake+1", "description": "Rich dark chocolate with gold leaf.", "rating": 4.9, "inStock": true },
+        { "id": "c2", "title": "Lemon Zest Bliss", "category": "cupcake", "price": 3.95, "image": "https://placehold.co/400x400?text=Cupcake+2", "description": "Tangy lemon curd filling and citrus frosting.", "rating": 4.5, "inStock": true, "features": ["Lactose-Free"] },
+        { "id": "c3", "title": "Salted Caramel Swirl", "category": "cupcake", "price": 4.25, "image": "https://placehold.co/400x400?text=Cupcake+3", "description": "Sweet and salty perfection with a caramel core.", "rating": 4.7, "inStock": true, "features": ["Vegan"] },
+        { "id": "c4", "title": "Strawberry Fields", "category": "cupcake", "price": 4.00, "image": "https://placehold.co/400x400?text=Cupcake+4", "description": "Fresh organic strawberries folded into the batter.", "rating": 4.6, "inStock": false },
+        { "id": "c5", "title": "Matcha Green Tea", "category": "cupcake", "price": 4.50, "image": "https://placehold.co/400x400?text=Cupcake+5", "description": "Premium ceremonial grade matcha infusion.", "rating": 4.3, "inStock": true, "features": ["Gluten-Free"] },
+        { "id": "c6", "title": "Birthday Sprinkles", "category": "cupcake", "price": 3.50, "image": "https://placehold.co/400x400?text=Cupcake+6", "description": "Vanilla bean with colorful confetti sprinkles.", "rating": 4.8, "inStock": true },
+        { "id": "c7", "title": "Red Velvet Rose", "category": "cupcake", "price": 4.75, "image": "https://placehold.co/400x400?text=Cupcake+7", "description": "Traditional red velvet with a rosewater hint.", "rating": 4.9, "inStock": false },
+        { "id": "c8", "title": "Espresso Shot", "category": "cupcake", "price": 4.25, "image": "https://placehold.co/400x400?text=Cupcake+8", "description": "Robust coffee flavor for the caffeine lover.", "rating": 4.4, "inStock": true },
+  
+        { "id": "w1", "title": "The Grand Orchid", "category": "wedding", "price": 850.00, "image": "https://placehold.co/400x400?text=Wedding+1", "description": "5-tier floral masterpiece with real orchids.", "rating": 5.0, "inStock": true },
+        { "id": "w2", "title": "Rustic Birch", "category": "wedding", "price": 320.00, "image": "https://placehold.co/400x400?text=Wedding+2", "description": "Textured frosting resembling autumn birch trees.", "rating": 4.7, "inStock": false },
+        { "id": "w3", "title": "Minimalist Marble", "category": "wedding", "price": 410.00, "image": "https://placehold.co/400x400?text=Wedding+3", "description": "Grey and white marble fondant with silver foil.", "rating": 4.8, "inStock": true, "features": ["Gluten-Free"] },
+        { "id": "w4", "title": "Champagne Dreams", "category": "wedding", "price": 550.00, "image": "https://placehold.co/400x400?text=Wedding+4", "description": "Infused with vintage pink champagne.", "rating": 4.9, "inStock": true },
+        { "id": "w5", "title": "Boho Wildflower", "category": "wedding", "price": 280.00, "image": "https://placehold.co/400x400?text=Wedding+5", "description": "Naked cake style with pressed edible flowers.", "rating": 4.6, "inStock": false, "features": ["Vegan"] },
+        { "id": "w6", "title": "Golden Gatsby", "category": "wedding", "price": 720.00, "image": "https://placehold.co/400x400?text=Wedding+6", "description": "Art deco inspired with 24k gold leaf accents.", "rating": 5.0, "inStock": false },
+        { "id": "w7", "title": "Victorian Lace", "category": "wedding", "price": 640.00, "image": "https://placehold.co/400x400?text=Wedding+7", "description": "Intricate piped lace detailing on ivory fondant.", "rating": 4.7, "inStock": true },
+        { "id": "w8", "title": "Choco-Berry Tier", "category": "wedding", "price": 390.00, "image": "https://placehold.co/400x400?text=Wedding+8", "description": "Rich ganache with cascading fresh berries.", "rating": 4.8, "inStock": false, "features": ["Lactose-Free"] }
+    ]
+}
