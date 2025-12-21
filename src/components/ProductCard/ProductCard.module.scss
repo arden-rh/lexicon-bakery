@@ -1,7 +1,6 @@
 .card {
     border: 1px solid $primary-color;
     border-radius: 8px;
-    padding: 1rem;
     background-color: $background-color;
     color: $text-color;
 
@@ -10,6 +9,13 @@
 		font-size: 1.5rem;
 		font-weight: 700;
 		font-style: normal;
+		margin-bottom: 0.5rem;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 4px;
 		margin-bottom: 0.5rem;
 	}
 }
