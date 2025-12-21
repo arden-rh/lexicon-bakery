@@ -4,9 +4,9 @@
     min-height: 100vh;
 }
 
-.content {
+.mainContent {
     flex: 1;
-    padding: 2rem;
+    padding: 1rem;
 
     /* Responsive padding for medium and larger screens */
     @include respond-to("medium") {
