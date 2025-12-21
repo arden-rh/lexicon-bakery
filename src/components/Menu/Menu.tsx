@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import styles from "@/components/Menu/Menu.module.scss";
 
 interface MenuProps {
@@ -7,11 +7,10 @@ interface MenuProps {
 }
 
 const Menu: React.FC<MenuProps> = ({ currentPage, setCurrentPage }) => {
+	const [isOpen, setIsOpen] = useState(false);
+	const [isDesktop, setIsDesktop] = useState(false);
 
-	const [isOpen, setIsOpen] = React.useState(false);
-	const [isDesktop, setIsDesktop] = React.useState(false);
-
-	React.useEffect(() => {
+	useEffect(() => {
 		const checkWidth = () => {
 			const desktop = window.innerWidth >= 768;
 			setIsDesktop(desktop);
@@ -28,29 +27,39 @@ const Menu: React.FC<MenuProps> = ({ currentPage, setCurrentPage }) => {
 		return () => window.removeEventListener("resize", checkWidth);
 	}, []);
 
+	const navigateToPage = (page: string) => {
+		setCurrentPage(page);
+		if (!isDesktop) {
+			setIsOpen(false);
+		}
+	};
+
 	return (
 		<>
 			<div className={styles.menuButtonWrapper}>
-				<button className={styles.menuButton} onClick={() => setIsOpen(!isOpen)}>
+				<button
+					className={styles.menuButton}
+					onClick={() => setIsOpen(!isOpen)}
+				>
 					<span className="material-symbols-outlined">menu</span>
 				</button>
 			</div>
 			{isOpen && (
 				<nav className={styles.links}>
 					<button
-						onClick={() => setCurrentPage("home")}
+						onClick={() => navigateToPage("home")}
 						className={currentPage === "home" ? styles.active : ""}
 					>
 						Home
 					</button>
 					<button
-						onClick={() => setCurrentPage("about")}
+						onClick={() => navigateToPage("about")}
 						className={currentPage === "about" ? styles.active : ""}
 					>
 						About
 					</button>
 					<button
-						onClick={() => setCurrentPage("products")}
+						onClick={() => navigateToPage("products")}
 						className={
 							currentPage === "products" ? styles.active : ""
 						}
@@ -58,7 +67,7 @@ const Menu: React.FC<MenuProps> = ({ currentPage, setCurrentPage }) => {
 						Products
 					</button>
 					<button
-						onClick={() => setCurrentPage("contact")}
+						onClick={() => navigateToPage("contact")}
 						className={
 							currentPage === "contact" ? styles.active : ""
 						}
