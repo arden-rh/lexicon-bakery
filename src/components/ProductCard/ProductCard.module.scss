@@ -1,21 +1,63 @@
 .card {
-    border: 1px solid $primary-color;
-    border-radius: 8px;
-    background-color: $background-color;
-    color: $text-color;
-
-	h3 {
-		font-family: $font-family-subheading;
-		font-size: 1.5rem;
-		font-weight: 700;
-		font-style: normal;
-		margin-bottom: 0.5rem;
-	}
+	display: flex;
+	flex-direction: column;
+	border: 2px solid $primary-color;
+	border-radius: 8px;
+	background-color: $background-color;
+	color: $text-color;
 
 	img {
 		width: 100%;
 		height: auto;
 		border-radius: 4px;
-		margin-bottom: 0.5rem;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		margin: 10px 7px;
+
+		@include respond-to("medium") {
+			margin: 20px;
+		}
+
+		h4 {
+			font-family: $font-family-subheading;
+			font-size: 1.1rem;
+			font-weight: 700;
+			font-style: normal;
+			margin: 0 0 5px;
+			line-height: 1.25rem;
+
+			@include respond-to("medium") {
+				font-size: 1.3rem;
+				line-height: 1.5rem;
+			}
+		}
+
+		p {
+			font-family: $font-family-base;
+			margin: 0;
+		}
+
+		.price {
+			font-size: 1rem;
+			font-weight: 500;
+
+			@include respond-to("medium") {
+				font-size: 1.2rem;
+				font-weight: 400;
+			}
+		}
+
+		.description {
+			font-size: 0.9rem;
+			font-weight: 400;
+
+			@include respond-to("medium") {
+				font-size: 1rem;
+			}
+		}
 	}
 }
