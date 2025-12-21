@@ -8,16 +8,17 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ children }) => {
 	return (
 		<header className={styles.header}>
-			<div className={styles.branding}>
-				<img
-					src="/src/static/images/icon.png"
-					alt="Munamii Cakery Logo"
-				/>
-				<h1 className={styles.logo}>Munamii Cakery</h1>
-				{/* <img src="/src/static/images/logotype.png" alt="Munamii Cakery Logotype" /> */}
+			<div className={styles.topRow}>
+				<div className={styles.branding}>
+					<img
+						src="/src/static/images/icon.png"
+						alt="Munamii Cakery Logo"
+					/>
+					<h1 className={styles.logo}>Munamii Cakery</h1>
+					{/* <img src="/src/static/images/logotype.png" alt="Munamii Cakery Logotype" /> */}
+				</div>
 			</div>
-
-			<div>{children}</div>
+			{children}
 		</header>
 	);
 };

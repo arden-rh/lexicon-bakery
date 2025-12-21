@@ -1,10 +1,23 @@
 .header {
-	background-color: $secondary-color;
+	background-color: $background-color;
+	border-bottom: 2px solid $primary-color;
 	padding: 1rem 2rem;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
+	gap: 1rem;
+	position: relative;
+
+	@include respond-to("medium") {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.topRow {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
 
 	.branding {
 		display: flex;

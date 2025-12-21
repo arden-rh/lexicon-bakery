@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/components/Layout/Layout.module.scss";
 import Header from "../Header/Header";
+import Menu from "../Menu/Menu";
 
 interface LayoutProps {
 	children: React.ReactNode;
@@ -16,38 +17,11 @@ const Layout: React.FC<LayoutProps> = ({
 	return (
 		<div className={styles.wrapper}>
 			<Header>
-				<nav className={styles.navbar}>
-					<button
-						onClick={() => setCurrentPage("home")}
-						className={currentPage === "home" ? styles.active : ""}
-					>
-						Home
-					</button>
-					<button
-						onClick={() => setCurrentPage("about")}
-						className={currentPage === "about" ? styles.active : ""}
-					>
-						About
-					</button>
-					<button
-						onClick={() => setCurrentPage("products")}
-						className={
-							currentPage === "products" ? styles.active : ""
-						}
-					>
-						Products
-					</button>
-					<button
-						onClick={() => setCurrentPage("contact")}
-						className={
-							currentPage === "contact" ? styles.active : ""
-						}
-					>
-						Contact
-					</button>
-				</nav>
+				<Menu
+					currentPage={currentPage}
+					setCurrentPage={setCurrentPage}
+				/>
 			</Header>
-
 			<main className={styles.mainContent}>{children}</main>
 			<footer className={styles.footer}>
 				<p>&copy; In progress</p>

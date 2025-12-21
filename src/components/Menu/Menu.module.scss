@@ -1,0 +1,41 @@
+@import "@/styles/breakpoints";
+
+.menuButtonWrapper {
+	position: absolute;
+	top: 1.75rem;
+	right: 1.75rem;
+
+	@include respond-to("medium") {
+		display: none;
+	}
+}
+
+.links {
+	display: flex;
+	gap: 1.5rem;
+	align-items: center;
+	justify-content: center;
+
+	button {
+		background: none;
+		border: none;
+		font-family: $font-family-subheading;
+		font-weight: 700;
+		font-size: 1rem;
+		color: $header-color;
+		cursor: pointer;
+		padding: 0;
+	}
+}
+
+.menuButton {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+
+	.material-symbols-outlined {
+		font-size: 2rem;
+		color: $header-color;
+	}
+}
