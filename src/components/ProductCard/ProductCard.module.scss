@@ -10,6 +10,7 @@
 	img {
 		width: 100%;
 		height: auto;
+		border-bottom: 2px solid $primary-color;
 	}
 
 	.content {
@@ -44,20 +45,7 @@
 			font-size: 0.9rem;
 			font-weight: 600;
 			background-color: $accent-color;
-			border-radius: 4px;
-			margin: 0;
-
-			@include respond-to("medium") {
-				font-size: 1.2rem;
-			}
-
-			@include respond-to("large") {
-				font-size: 1rem;
-			}
-		}
-
-		.description {
-			font-size: 0.9rem;
+			border-radius: 8px;
 			margin: 0;
 
 			@include respond-to("medium") {
@@ -67,6 +55,11 @@
 			@include respond-to("large") {
 				font-size: 0.9rem;
 			}
+		}
+
+		.description {
+			font-size: 0.9rem;
+			margin: 0;
 		}
 	}
 
@@ -89,11 +82,11 @@
 			text-transform: lowercase;
 
 			@include respond-to("medium") {
-				font-size: 1rem;
+				font-size: 0.9rem;
 			}
 
 			@include respond-to("large") {
-				font-size: 0.9rem;
+				font-size: 0.8rem;
 			}
 		}
 	}
