@@ -9,88 +9,88 @@
 	"products": [
 		{
 			"id": "c1",
-			"title": "Midnight Velvet",
+			"title": "Winter Chocolate Delight",
 			"category": "cupcakes",
 			"price": 4.5,
-			"image": "https://placehold.co/400x400?text=Cupcake+1",
-			"description": "Rich dark chocolate with gold leaf.",
+			"image": "src/assets/images/cupcakes/c1_winter-chocolate-delight.jpg",
+			"description": "Rich dark chocolate with coconut flakes.",
 			"rating": 4.9,
 			"inStock": true
 		},
 		{
 			"id": "c2",
-			"title": "Lemon Zest Bliss",
+			"title": "Red Velvet Rose",
 			"category": "cupcakes",
-			"price": 3.95,
-			"image": "https://placehold.co/400x400?text=Cupcake+2",
-			"description": "Tangy lemon curd filling and citrus frosting.",
-			"rating": 4.5,
-			"inStock": true,
-			"features": ["Lactose-Free"]
+			"price": 4.75,
+			"image": "src/assets/images/cupcakes/c2_red-velvet-rose.jpg",
+			"description": "Traditional red velvet with a rosewater hint.",
+			"rating": 4.9,
+			"inStock": false
 		},
 		{
 			"id": "c3",
-			"title": "Salted Caramel Swirl",
+			"title": "Double Choco Oreo",
 			"category": "cupcakes",
 			"price": 4.25,
-			"image": "https://placehold.co/400x400?text=Cupcake+3",
-			"description": "Sweet and salty perfection with a caramel core.",
+			"image": "src/assets/images/cupcakes/c3_double-choco-oreo.jpg",
+			"description": "Chocolate cupcake with Oreo pieces and frosting.",
 			"rating": 4.7,
 			"inStock": true,
 			"features": ["Vegan"]
 		},
 		{
 			"id": "c4",
-			"title": "Strawberry Fields",
+			"title": "Candy Marshmallow Dream",
 			"category": "cupcakes",
 			"price": 4.0,
-			"image": "https://placehold.co/400x400?text=Cupcake+4",
-			"description": "Fresh organic strawberries folded into the batter.",
+			"image": "src/assets/images/cupcakes/c4_candy-marshmallow-dream.jpg",
+			"description": "Vanilla base topped with marshmallow fluff.",
 			"rating": 4.6,
-			"inStock": false
+			"inStock": false,
+			"features": ["Gluten-Free"]
 		},
 		{
 			"id": "c5",
-			"title": "Matcha Green Tea",
+			"title": "Hazelnut Crunch",
 			"category": "cupcakes",
 			"price": 4.5,
-			"image": "https://placehold.co/400x400?text=Cupcake+5",
-			"description": "Premium ceremonial grade matcha infusion.",
+			"image": "src/assets/images/cupcakes/c5_hazelnut-crunch.jpg",
+			"description": "Nutty cupcake with hazelnut frosting, crunchy hazelnut pieces and a Ferrero Rocher on top.",
 			"rating": 4.3,
-			"inStock": true,
-			"features": ["Gluten-Free"]
+			"inStock": true
 		},
 		{
 			"id": "c6",
 			"title": "Birthday Sprinkles",
 			"category": "cupcakes",
 			"price": 3.5,
-			"image": "https://placehold.co/400x400?text=Cupcake+6",
+			"image": "src/assets/images/cupcakes/c6_birthday-sprinkles.jpg",
 			"description": "Vanilla bean with colorful confetti sprinkles.",
 			"rating": 4.8,
-			"inStock": true
+			"inStock": true,
+			"features": ["Vegan", "Gluten-Free"]
 		},
 		{
 			"id": "c7",
-			"title": "Red Velvet Rose",
-			"category": "cupcakes",
-			"price": 4.75,
-			"image": "https://placehold.co/400x400?text=Cupcake+7",
-			"description": "Traditional red velvet with a rosewater hint.",
-			"rating": 4.9,
-			"inStock": false
-		},
-		{
-			"id": "c8",
-			"title": "Espresso Shot",
+			"title": "Caramel Waffle",
 			"category": "cupcakes",
 			"price": 4.25,
-			"image": "https://placehold.co/400x400?text=Cupcake+8",
-			"description": "Robust coffee flavor for the caffeine lover.",
+			"image": "src/assets/images/cupcakes/c7_caramel-waffle.jpg",
+			"description": "Caramel cupcake topped with buttercream frosting and waffle pieces.",
 			"rating": 4.4,
 			"inStock": true
 		},
-
+		{
+			"id": "c8",
+			"title": "Valentine Surprise",
+			"category": "cupcakes",
+			"price": 3.95,
+			"image": "src/assets/images/cupcakes/c8_valentine-surprise.jpg",
+			"description": "Lemon base with raspberry frosting and sprinkles.",
+			"rating": 4.5,
+			"inStock": true,
+			"features": ["Lactose-Free"]
+		},
 		{
 			"id": "w1",
 			"title": "The Grand Orchid",
