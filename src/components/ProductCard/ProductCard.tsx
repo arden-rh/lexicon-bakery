@@ -16,9 +16,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 			/>
 			<div className={styles.content}>
 				<h4 className={styles.title}>{product.title}</h4>
-				<p className={styles.price}>${product.price.toFixed(2)}</p>
+				{product.category == "wedding-cakes" && (
+					<p className={styles.price}>
+						{product.price.toFixed(2)} kr / portion
+					</p>
+				)}
+				{product.category == "cupcakes" && (
+					<p className={styles.price}>
+						{product.price.toFixed(2)} kr / cupcake
+					</p>
+				)}
 				<p className={styles.description}>{product.description}</p>
 			</div>
+			{product.features && (
+				<ul className={styles.features}>
+					{product.features.map((feature, index) => (
+						<li key={index}>{feature}</li>
+					))}
+				</ul>
+			)}
 		</div>
 	);
 };
