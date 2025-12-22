@@ -1,6 +1,8 @@
+import styles from "./About.module.scss";
+
 const About = () => {
 	return (
-		<section>
+		<section className={styles.about}>
 			<h2>About Us</h2>
 			<p>
 				At Munamii Cakery, each cake, each box of cupcakes that we make
