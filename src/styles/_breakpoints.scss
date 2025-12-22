@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // Breakpoints
 $breakpoints: (
   "small":  576px,
@@ -9,7 +11,7 @@ $breakpoints: (
 // The Mixin
 @mixin respond-to($breakpoint) {
   // Get the value from the map
-  $value: map-get($breakpoints, $breakpoint);
+  $value: map.get($breakpoints, $breakpoint);
 
   @media (min-width: $value) {
     @content;

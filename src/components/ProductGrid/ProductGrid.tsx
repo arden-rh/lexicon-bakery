@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/components/ProductGrid/ProductGrid.module.scss';
+import styles from "./ProductGrid.module.scss";
 
 interface ProductGridProps {
    children: React.ReactNode;

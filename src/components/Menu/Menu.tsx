@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
-import styles from "@/components/Menu/Menu.module.scss";
+import { NavLink } from "react-router-dom";
+import styles from "./Menu.module.scss";
 
-interface MenuProps {
-	currentPage: string;
-	setCurrentPage: (page: string) => void;
-}
-
-const Menu: React.FC<MenuProps> = ({ currentPage, setCurrentPage }) => {
+const Menu: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isDesktop, setIsDesktop] = useState(false);
 
@@ -27,8 +23,7 @@ const Menu: React.FC<MenuProps> = ({ currentPage, setCurrentPage }) => {
 		return () => window.removeEventListener("resize", checkWidth);
 	}, []);
 
-	const navigateToPage = (page: string) => {
-		setCurrentPage(page);
+	const handleNavClick = () => {
 		if (!isDesktop) {
 			setIsOpen(false);
 		}
@@ -41,39 +36,51 @@ const Menu: React.FC<MenuProps> = ({ currentPage, setCurrentPage }) => {
 					className={styles.menuButton}
 					onClick={() => setIsOpen(!isOpen)}
 				>
-					<span className="material-symbols-outlined">menu</span>
+					{isOpen ? (
+						<span className="material-symbols-outlined">close</span>
+					) : (
+						<span className="material-symbols-outlined">menu</span>
+					)}
 				</button>
 			</div>
 			{isOpen && (
 				<nav className={styles.links}>
-					<button
-						onClick={() => navigateToPage("home")}
-						className={currentPage === "home" ? styles.active : ""}
+					<NavLink
+						to="/"
+						onClick={handleNavClick}
+						className={({ isActive }) =>
+							isActive ? styles.active : ""
+						}
 					>
 						Home
-					</button>
-					<button
-						onClick={() => navigateToPage("about")}
-						className={currentPage === "about" ? styles.active : ""}
+					</NavLink>
+					<NavLink
+						to="/about"
+						onClick={handleNavClick}
+						className={({ isActive }) =>
+							isActive ? styles.active : ""
+						}
 					>
 						About
-					</button>
-					<button
-						onClick={() => navigateToPage("products")}
-						className={
-							currentPage === "products" ? styles.active : ""
+					</NavLink>
+					<NavLink
+						to="/products"
+						onClick={handleNavClick}
+						className={({ isActive }) =>
+							isActive ? styles.active : ""
 						}
 					>
 						Products
-					</button>
-					<button
-						onClick={() => navigateToPage("contact")}
-						className={
-							currentPage === "contact" ? styles.active : ""
+					</NavLink>
+					<NavLink
+						to="/contact"
+						onClick={handleNavClick}
+						className={({ isActive }) =>
+							isActive ? styles.active : ""
 						}
 					>
 						Contact
-					</button>
+					</NavLink>
 				</nav>
 			)}
 		</>

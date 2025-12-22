@@ -37,23 +37,20 @@
 		}
 
 		p {
-			font-family: $font-family-base;
 			margin: 0;
 		}
 
 		.price {
 			font-size: 1rem;
-			font-weight: 500;
+			font-weight: 600;
 
 			@include respond-to("medium") {
 				font-size: 1.2rem;
-				font-weight: 400;
 			}
 		}
 
 		.description {
 			font-size: 0.9rem;
-			font-weight: 400;
 
 			@include respond-to("medium") {
 				font-size: 1rem;

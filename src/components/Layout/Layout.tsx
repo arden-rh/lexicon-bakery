@@ -1,31 +1,22 @@
 import React from "react";
-import styles from "@/components/Layout/Layout.module.scss";
+import styles from "./Layout.module.scss";
+
 import Header from "../Header/Header";
 import Menu from "../Menu/Menu";
+import Footer from "../Footer/Footer";
 
 interface LayoutProps {
 	children: React.ReactNode;
-	currentPage: string;
-	setCurrentPage: (page: string) => void;
 }
 
-const Layout: React.FC<LayoutProps> = ({
-	children,
-	currentPage,
-	setCurrentPage,
-}) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className={styles.wrapper}>
 			<Header>
-				<Menu
-					currentPage={currentPage}
-					setCurrentPage={setCurrentPage}
-				/>
+				<Menu />
 			</Header>
 			<main className={styles.mainContent}>{children}</main>
-			<footer className={styles.footer}>
-				<p>&copy; In progress</p>
-			</footer>
+			<Footer />
 		</div>
 	);
 };
