@@ -6,6 +6,7 @@ import styles from "@/pages/Products/Products.module.scss";
 
 import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { ProductGrid } from "@/components/ProductGrid/ProductGrid";
+import { ProductModule } from "@/components/ProductModule/ProductModule";
 
 // Cast the imported JSON to your Interface
 const data = rawData as ProductResponse;
@@ -14,6 +15,17 @@ const categories: string[] = data.metadata.categories;
 
 const Products = () => {
 	const [currentCategory, setCurrentCategory] = useState<string>("cupcakes");
+	const [selectedProduct, setSelectedProduct] = useState<Product | null>(
+		null
+	);
+
+	const handleProductClick = (product: Product) => {
+		setSelectedProduct(product);
+	};
+
+	const handleCloseModal = () => {
+		setSelectedProduct(null);
+	};
 	return (
 		<>
 			<section className={styles.hero}>
@@ -43,10 +55,21 @@ const Products = () => {
 							(product) => product.category === currentCategory
 						)
 						.map((product) => (
-							<ProductCard key={product.id} product={product} />
+							<ProductCard
+								key={product.id}
+								product={product}
+								onClick={handleProductClick}
+							/>
 						))}
 				</ProductGrid>
 			</section>
+			{selectedProduct && (
+				<ProductModule
+					product={selectedProduct}
+					onClose={handleCloseModal}
+				/>
+			)}
+			s
 		</>
 	);
 };

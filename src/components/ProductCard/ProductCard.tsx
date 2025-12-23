@@ -4,11 +4,17 @@ import type { Product } from "@/types/product.types";
 
 interface ProductCardProps {
 	product: Product;
+	onClick: (product: Product) => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
 	return (
-		<div className={styles.card} key={product.id}>
+		<button 
+			className={styles.card} 
+			key={product.id} 
+			onClick={() => onClick(product)}
+			aria-label={`View details for ${product.title}`}
+		>
 			<img
 				src={product.image}
 				alt={product.title}
@@ -35,6 +41,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 					))}
 				</ul>
 			)}
-		</div>
+		</button>
 	);
 };
