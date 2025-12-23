@@ -9,9 +9,9 @@ interface ProductCardProps {
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
 	return (
-		<button 
-			className={styles.card} 
-			key={product.id} 
+		<button
+			className={styles.card}
+			key={product.id}
 			onClick={() => onClick(product)}
 			aria-label={`View details for ${product.title}`}
 		>
@@ -20,6 +20,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
 				alt={product.title}
 				className={styles.image}
 			/>
+			{product.features && (
+				<ul className={styles.features}>
+					{product.features.map((feature, index) => (
+						<li key={index}>{feature}</li>
+					))}
+				</ul>
+			)}
 			<div className={styles.content}>
 				<h4 className={styles.title}>{product.title}</h4>
 				{product.category == "wedding-cakes" && (
@@ -32,15 +39,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
 						{product.price.toFixed(2)} kr / cupcake
 					</p>
 				)}
-				<p className={styles.description}>{product.description}</p>
 			</div>
-			{product.features && (
-				<ul className={styles.features}>
-					{product.features.map((feature, index) => (
-						<li key={index}>{feature}</li>
-					))}
-				</ul>
-			)}
 		</button>
 	);
 };

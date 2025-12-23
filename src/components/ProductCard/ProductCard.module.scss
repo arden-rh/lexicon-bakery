@@ -1,12 +1,14 @@
 .card {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	border-radius: 8px;
 	background-color: $secondary-color;
-	border: 2px solid $primary-color;
 	color: $text-color;
 	overflow: hidden;
 	padding: 0;
+	border: 0;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 	img {
 		width: 100%;
@@ -45,7 +47,6 @@
 		.price {
 			font-size: 0.9rem;
 			font-weight: 600;
-			background-color: $accent-color;
 			border-radius: 8px;
 			margin: 0;
 
@@ -71,12 +72,15 @@
 		flex-wrap: wrap;
 		gap: 6px;
 		padding: 0 5px;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: center;
+		position: absolute;
+		top: 10px;
+		right: 5px;
 
 		li {
 			font-size: 0.8rem;
-			background-color: $primary-color;
+			background-color: $accent-color;
 			color: $text-color;
 			padding: 2px 6px;
 			border-radius: 4px;
@@ -87,7 +91,7 @@
 			}
 
 			@include respond-to("large") {
-				font-size: 0.8rem;
+				font-size: 0.9rem;
 			}
 		}
 	}
