@@ -1,6 +1,56 @@
 .footer {
 	padding: 1rem 2rem;
 	text-align: center;
+	border-top: 3px solid $primary-color;
+
+	.contactInfo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		margin: 0;
+		font-size: 0.9rem;
+		color: $text-color;
+		padding: 0 0 0.5rem;
+		border-bottom: 1px solid $primary-color;
+
+		@include respond-to("medium") {
+			border-bottom: none;
+			font-size: 1rem;
+		}
+
+		.socialLinks {
+			display: flex;
+			gap: 15px;
+
+			a {
+				display: inline-flex;
+				align-items: center;
+				line-height: 0.75rem;
+				text-decoration: none;
+				color: $header-color;
+				font-weight: 600;
+
+				svg {
+					width: 16px;
+					height: 16px;
+					vertical-align: middle;
+					margin-right: 5px;
+					fill: $header-color;
+
+					@include respond-to("medium") {
+						width: 18px;
+						height: 18px;
+					}
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
 
 	ul {
 		list-style: none;
@@ -28,6 +78,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
+		padding: 0.5rem 0 0;
 
 		h3 {
 			margin: 0;

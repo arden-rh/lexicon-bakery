@@ -9,6 +9,7 @@ A modern bakery website built with React, TypeScript, and Vite. Browse cupcakes 
 - React Router for navigation (Home, Products, About, Contact)
 - TypeScript for type safety
 - Product filtering and grid display
+- Contact form with validation (demo - no backend)
 
 ## Tech Stack
 
@@ -21,21 +22,25 @@ A modern bakery website built with React, TypeScript, and Vite. Browse cupcakes 
 ## Getting Started
 
 ### Install dependencies
+
 ```bash
 npm install
 ```
 
 ### Run development server
+
 ```bash
 npm run dev
 ```
 
 ### Build for production
+
 ```bash
 npm run build
 ```
 
 ### Preview production build
+
 ```bash
 npm preview
 ```
