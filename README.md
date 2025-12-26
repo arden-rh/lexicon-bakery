@@ -2,6 +2,8 @@
 
 A modern bakery website built with React, TypeScript, and Vite. Browse cupcakes and wedding cakes with product details, ratings, and prices.
 
+This project is a Lexicon assignment.
+
 ## Features
 
 - Product catalog with cupcakes and wedding cakes
@@ -52,3 +54,7 @@ npm preview
 - `src/data/` - Product data
 - `src/styles/` - Global styles and SCSS configuration
 - `src/types/` - TypeScript type definitions
+
+## License
+
+© Arden Haldorson
