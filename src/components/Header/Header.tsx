@@ -9,14 +9,13 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.topRow}>
-				<div className={styles.branding}>
+				<a href="/" className={styles.branding}>
 					<img
 						src="/src/assets/images/icon.png"
 						alt="Munamii Cakery Logo"
 					/>
 					<h1 className={styles.logo}>Munamii Cakery</h1>
-					{/* <img src="/src/assets/images/logotype.png" alt="Munamii Cakery Logotype" /> */}
-				</div>
+				</a>
 			</div>
 			{children}
 		</header>

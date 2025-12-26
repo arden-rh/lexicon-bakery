@@ -40,7 +40,7 @@
 		},
 		{
 			"id": "c4",
-			"title": "Candy Marshmallow Dream",
+			"title": "Marshmallow Dream",
 			"category": "cupcakes",
 			"price": 45,
 			"image": "src/assets/images/cupcakes/c4_candy-marshmallow-dream.jpg",
@@ -88,7 +88,7 @@
 			"image": "src/assets/images/cupcakes/c8_valentine-surprise.jpg",
 			"description": "Lemon base with raspberry frosting and sprinkles.",
 			"rating": 4.5,
-			"inStock": true,
+			"inStock": false,
 			"features": ["Lactose-Free"]
 		},
 		{

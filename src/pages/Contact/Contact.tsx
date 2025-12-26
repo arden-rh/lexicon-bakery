@@ -4,7 +4,7 @@ const Contact = () => {
 	return (
 		<section className={styles.contact}>
 			<div>
-				<h2>Contact Us</h2>
+				<h2 className="pageHeader">Contact Us</h2>
 				<p>
 					Home delivery service: All the city of Stockholm (redacted)
 					and Malmo (redacted) with additional cost.
@@ -19,7 +19,7 @@ const Contact = () => {
 					</span>
 				</p>
 			</div>
-			<div>
+			<div className={styles.openingHours}>
 				<h3>Opening Hours</h3>
 				<p>Tuesday to Saturday 9 a.m. at 2 p.m.</p>
 			</div>

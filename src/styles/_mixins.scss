@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+@mixin textBox {
+  font-size: 1rem;
+  color: $text-color;
+  margin: 0;
+  background-color: $white-color;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid $primary-color;
+  max-width: 800px;
+}

@@ -3,8 +3,8 @@ import styles from "./About.module.scss";
 const About = () => {
 	return (
 		<section className={styles.about}>
-			<h2>About Us</h2>
-			<p>
+			<h2 className="pageHeader">About Us</h2>
+			<p className="textBox">
 				At Munamii Cakery, each cake, each box of cupcakes that we make
 				has a very special value for us. We not only want to bring a
 				dessert to your table but rather a unique experience for you,
