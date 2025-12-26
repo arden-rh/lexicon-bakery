@@ -8,13 +8,7 @@
     flex: 1;
     padding: 1rem;
 
-    /* Responsive padding for medium and larger screens */
     @include respond-to("medium") {
         padding: 3rem 4rem;
     }
-}
-
-.footer {
-    padding: 1rem 2rem;
-    text-align: center;
 }

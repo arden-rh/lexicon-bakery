@@ -43,7 +43,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 				)}
 			</div>
 			<div className={styles.content}>
-				<h4 className={styles.title}>{product.title}</h4>
+				<h4>{product.title}</h4>
 			</div>
 		</button>
 	);
