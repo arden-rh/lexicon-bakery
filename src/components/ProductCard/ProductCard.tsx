@@ -7,7 +7,10 @@ interface ProductCardProps {
 	onClick: (product: Product) => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({
+	product,
+	onClick,
+}) => {
 	return (
 		<button
 			className={styles.card}
@@ -15,30 +18,32 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
 			onClick={() => onClick(product)}
 			aria-label={`View details for ${product.title}`}
 		>
-			<img
-				src={product.image}
-				alt={product.title}
-				className={styles.image}
-			/>
-			{product.features && (
-				<ul className={styles.features}>
-					{product.features.map((feature, index) => (
-						<li key={index}>{feature}</li>
-					))}
-				</ul>
-			)}
-			<div className={styles.content}>
-				<h4 className={styles.title}>{product.title}</h4>
+			<div className={styles.imageContainer}>
+				<img
+					src={product.image}
+					alt={product.title}
+					className={styles.image}
+				/>
+				{product.features && (
+					<ul className={styles.features}>
+						{product.features.map((feature, index) => (
+							<li key={index}>{feature}</li>
+						))}
+					</ul>
+				)}
 				{product.category == "wedding-cakes" && (
-					<p className={styles.price}>
-						{product.price.toFixed(2)} kr / portion
-					</p>
+					<div className={styles.price}>
+						{product.price} kr / portion
+					</div>
 				)}
 				{product.category == "cupcakes" && (
-					<p className={styles.price}>
-						{product.price.toFixed(2)} kr / cupcake
-					</p>
+					<div className={styles.price}>
+						{product.price} kr / cupcake
+					</div>
 				)}
+			</div>
+			<div className={styles.content}>
+				<h4 className={styles.title}>{product.title}</h4>
 			</div>
 		</button>
 	);

@@ -13,15 +13,16 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: $secondary-color;
+	background-color: $white-color;
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 10px;
 	width: 80%;
-	border-radius: 8px;
+	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 	z-index: 1000;
+	font-family: $font-family-base;
 
 	@include respond-to("medium") {
 		flex-direction: row;
@@ -29,7 +30,124 @@
 
 	@include respond-to("large") {
 		width: 60%;
-		top: 55%;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 8px;
+		padding: 20px 0;
+
+		.features {
+			list-style: none;
+			padding: 0;
+			margin: 10px 0 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 6px;
+
+			li {
+				font-size: 0.8rem;
+				background-color: $accent-color;
+				color: $text-color;
+				padding: 3px 8px;
+				border-radius: 4px;
+				text-transform: lowercase;
+			}
+
+			@include respond-to("medium") {
+				padding: 0 10px;
+			}
+
+			@include respond-to("large") {
+				li {
+					font-size: 0.9rem;
+					padding: 4px 10px;
+				}
+			}
+		}
+
+		.topContent {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 5px;
+
+			@include respond-to("medium") {
+				gap: 12px;
+				margin-top: 2rem;
+				padding: 0 10px;
+			}
+
+			@include respond-to("large") {
+				margin-top: 4rem;
+			}
+
+			h4 {
+				font-family: $font-family-subheading;
+				font-size: 1.4rem;
+				font-weight: 700;
+
+				@include respond-to("medium") {
+					font-size: 1.75rem;
+				}
+			}
+
+			p {
+				margin: 0;
+			}
+
+			.description {
+				font-size: 0.9rem;
+				line-height: 1.2rem;
+				color: $text-color;
+				padding: 0 5px;
+
+				@include respond-to("medium") {
+					font-size: 1rem;
+				}
+			}
+
+			.priceStock {
+				display: flex;
+				justify-content: center;
+				gap: 8px;
+
+				@include respond-to("medium") {
+					flex-direction: column;
+					gap: 0;
+					border-radius: 8px;
+					border: 2px solid $primary-color;
+					background-color: $background-color;
+					padding: 5px 10px;
+				}
+
+				.price {
+					font-size: 0.8rem;
+					font-weight: 600;
+					padding-right: 8px;
+					border-right: 1px solid $text-color;
+
+					@include respond-to("medium") {
+						font-size: 0.9rem;
+						border-right: none;
+					}
+				}
+
+				.stock {
+					font-size: 0.8rem;
+					font-weight: 600;
+
+					@include respond-to("medium") {
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
 	}
 
 	.imageContainer {
@@ -40,6 +158,27 @@
 			width: 100%;
 			height: auto;
 			display: block;
+			border-bottom: 1px solid $primary-color;
+
+			@include respond-to("medium") {
+				border-bottom: none;
+				border-right: 1px solid $primary-color;
+				height: 100%;
+				max-height: 700px;
+				object-fit: cover;
+			}
+		}
+
+		.category {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			font-size: 0.9rem;
+			background-color: $primary-color;
+			color: $text-color;
+			padding: 5px;
+			border-radius: 4px;
+			border: none;
 		}
 
 		.closeButton {
@@ -51,7 +190,8 @@
 			border-radius: 8px;
 			font-size: 1.5rem;
 			cursor: pointer;
-			color: $text-color;
+			color: $white-color;
+			background-color: $header-color;
 			padding: 2px;
 			height: 28px;
 
