@@ -5,10 +5,8 @@ interface ProductGridProps {
    children: React.ReactNode;
 };
 
-export const ProductGrid: React.FC<ProductGridProps> = ({ children }) => {
-    return (
-        <div className={styles.productGrid}>
-			{children}
-        </div>
-    )
+const ProductGrid: React.FC<ProductGridProps> = ({ children }) => {
+	return <div className={styles.productGrid}>{children}</div>;
 };
+
+export default ProductGrid;

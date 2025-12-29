@@ -7,7 +7,7 @@ interface ProductModuleProps {
 	goToCategory: (category: string) => void;
 }
 
-export const ProductModule: React.FC<ProductModuleProps> = ({
+const ProductModule: React.FC<ProductModuleProps> = ({
 	product,
 	onClose,
 	goToCategory,

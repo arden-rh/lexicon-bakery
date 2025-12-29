@@ -7,10 +7,7 @@ interface ProductCardProps {
 	onClick: (product: Product) => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({
-	product,
-	onClick,
-}) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
 	return (
 		<button
 			className={styles.card}
@@ -48,3 +45,5 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 		</button>
 	);
 };
+
+export default ProductCard;

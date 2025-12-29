@@ -4,9 +4,9 @@ import rawData from "../../data/products.json";
 
 import styles from "@/pages/Products/Products.module.scss";
 
-import { ProductCard } from "@/components/ProductCard/ProductCard";
-import { ProductGrid } from "@/components/ProductGrid/ProductGrid";
-import { ProductModule } from "@/components/ProductModule/ProductModule";
+import ProductCard from "@/components/ProductCard/ProductCard";
+import ProductGrid from "@/components/ProductGrid/ProductGrid";
+import ProductModule from "@/components/ProductModule/ProductModule";
 
 // Cast the imported JSON to your Interface
 const data = rawData as ProductResponse;
