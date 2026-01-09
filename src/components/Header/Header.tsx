@@ -10,10 +10,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
 		<header className={styles.header}>
 			<div className={styles.topRow}>
 				<a href="/" className={styles.branding}>
-					<img
-						src="/src/assets/images/icon.png"
-						alt="Munamii Cakery Logo"
-					/>
+					<img src="/images/icon.png" alt="Munamii Cakery Logo" />
 					<h1 className={styles.logo}>Munamii Cakery</h1>
 				</a>
 			</div>
