@@ -21,7 +21,11 @@ This project is a Lexicon assignment.
 - **SCSS Modules** for styling
 - **ESLint** for code quality
 
-## Getting Started
+## Live Site
+
+[View the live bakery site](https://arh-lexicon-bakery.netlify.app)
+
+## Getting Started (for local testing)
 
 ### Install dependencies
 
@@ -57,4 +61,4 @@ npm preview
 
 ## License
 
-© Arden Haldorson
+© 2026 Arden Haldorson
